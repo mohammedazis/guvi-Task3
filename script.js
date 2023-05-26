@@ -1,3 +1,9 @@
+//--------------------------------(1)comparing two jsonproperty--------------------------------------------------------------------
+let data1 = { name: "azis", age: 21 };
+let data2 = { " age": 2, name: "mohammed" };
+console.log(JSON.stringify(data1) == JSON.stringify(data2));
+//Output is "false"  Hence it has been compared.------------------------------
+
 //------------------------------(2)consoling the flags from json-------------------------------------------------------------------
 let flagCountry = [
   {
@@ -47242,5 +47248,11 @@ let flagCountry = [
     },
   },
 ];
-for (let i = 0; i < flagCountry.length - 1; i++)
+for (let i = 0; i < flagCountry.length - 1; i++) {
   console.log(flagCountry[i].flags);
+  //-----------------------------------------(3)printing region,names,subregions and populaton----------------------------------------------
+  console.log(flagCountry[i].name);
+  console.log(flagCountry[i].region);
+  console.log(flagCountry[i].subregion);
+  console.log(flagCountry[i].population);
+}
